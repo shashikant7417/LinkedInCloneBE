@@ -44,7 +44,7 @@ public class PostService {
         log.debug("Retrieving post with ID : {}" , postId);
 
         Long userId = UserContextHolder.getCurrentUserId();
-         List<PersonDto> firstConnections = connectionsClient.getFirstConnections(userId);
+         List<PersonDto> firstConnections = connectionsClient.getFirstConnections();
 
          // Send Notification to all connections
 

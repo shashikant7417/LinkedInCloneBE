@@ -4,10 +4,7 @@ import com.shashikant.linkedin.connections_service.entity.Person;
 import com.shashikant.linkedin.connections_service.services.ConnectionsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,9 +15,9 @@ public class ConnectionsController {
 
     private  final ConnectionsService connectionsService;
 
-    @GetMapping("/{userId}/first-degree")
-    public ResponseEntity<List<Person>> getFirstConnections(@PathVariable Long userId){
-         List<Person> firstDegreeConnection = connectionsService.getFirstDegreeConnection(userId);
+    @GetMapping("/first-degree")
+    public ResponseEntity<List<Person>> getFirstConnections(){
+         List<Person> firstDegreeConnection = connectionsService.getFirstDegreeConnection();
          return ResponseEntity.ok(firstDegreeConnection);
     }
 
