@@ -1,4 +1,4 @@
-package com.shashikant.linkedInApp.notification_service;
+package com.shashikant.linkedin.notification_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
